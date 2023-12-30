@@ -7,6 +7,10 @@ const apiKey = "dd8957905ee1217bcb450b8af57b72d6";
 // let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=germany&appid=${apiKey}`;
 
 searchIcon.addEventListener("click", function () {
+  changeData();
+});
+
+function changeData() {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${input.value}&appid=${apiKey}`;
   fetch(apiUrl)
     .then((res) => {
@@ -19,9 +23,7 @@ searchIcon.addEventListener("click", function () {
     .catch((err) => {
       console.log(err);
     });
-});
-
-function changeData() {}
+}
 
 setInterval(() => {
   let date = new Date();
