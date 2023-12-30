@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Single Day", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://static-cse.canva.com/blob/676990/17BlueGreen.4e693509.png");
+  background-size: cover;
+}
+
+.container {
+  background-color: rgb(251, 255, 0);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  height: 450px;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+/* Main Heading */
+.container .heading {
+  font-size: 50px;
+  text-align: center;
+  color: #05445e;
+}
+
+/* Search Bar */
+.container input {
+  width: 300px;
+  height: 36px;
+  border-radius: 50px;
+  border: 2px solid grey;
+  text-align: center;
+}
+.container input::placeholder {
+  color: grey;
+  text-align: center;
+}
+.container .searchbar .search-icon {
+  background-color: white;
+  /* height: 20px; */
+  border: 2px solid grey;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* after search bar */
+.container .container-degree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.container .container-degree h1 {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Single Day", cursive;
+  font-size: 80px;
+  line-height: 20px;
+  color: #0b222c;
+}
+
+/* Current Time And Wind */
+.container .wind-time {
+  color: #174de4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.container .wind-time .time,
+.container .wind-time .wind {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.container .wind-time .time .time-text,
+.container .wind-time .wind .wind-text {
+  font-size: 20px;
+}
+
+.container .wind-time .wind,
+.container .wind-time .time {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+@media screen and (max-width: 400px) {
+  .container input {
+    width: 200px;
+  }
+}
